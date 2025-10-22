@@ -3,15 +3,16 @@ const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-link');
 
 menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+  const isOpen = navLinks.classList.toggle('show');
+  menuToggle.setAttribute('aria-expanded', isOpen);
 });
 
 // Scroll spy
 window.addEventListener('scroll', () => {
-  const scrollPos = window.scrollY + 100; // offset
+  const scrollPos = window.scrollY + 100;
   links.forEach(link => {
     const section = document.querySelector(link.getAttribute('href'));
-    if(section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos){
+    if (section && section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -22,25 +23,20 @@ window.addEventListener('scroll', () => {
 // Fade-in on scroll
 document.addEventListener("DOMContentLoaded", function() {
   const faders = document.querySelectorAll('.fade-in');
-
-  const appearOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-  };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting){
+      if (entry.isIntersecting) {
         entry.target.classList.add('show');
         observer.unobserve(entry.target);
       }
     });
   }, appearOptions);
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+  faders.forEach(fader => appearOnScroll.observe(fader));
 });
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
