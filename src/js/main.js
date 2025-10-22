@@ -6,8 +6,8 @@ menuToggle.addEventListener('click', () => {
 
   // bloqueia rolagem horizontal/vertical enquanto o menu estiver aberto
   if (isOpen) {
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'clip';
+    document.body.style.overflow = 'clip';
   } else {
     document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
