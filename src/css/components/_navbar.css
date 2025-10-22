@@ -2,6 +2,7 @@
     position: sticky;
     top: 0;
     width: 100%;
+    /* Removendo max-width, garantindo que ocupe 100% da largura da viewport */
     background: #013440;
     color: #F0F8FF;
     z-index: 1000;
@@ -9,10 +10,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
 }
 
 .navbar .container {
+    /* Mantive o max-width aqui, mas o nav-links vai se basear no body no mobile */
     max-width: 140rem;
     width: 100%;
     display: flex;
@@ -21,7 +22,6 @@
 .navbar img {
     height: 4rem;
     width: auto;
-
 }
 
 .navbar .nav-links {
@@ -33,7 +33,7 @@
     gap: 1rem;
     list-style: none;
 }
-  
+ 
 .navbar .nav-link {
     color: #F0F8FF;
     text-decoration: none;
@@ -57,29 +57,62 @@
 }
 
 .navbar .container {
-    margin: 0 1rem;
+    /* Ajuste de margem para evitar rolagem horizontal em telas muito pequenas */
+    margin: 0 auto; 
+    padding: 0 1rem;
 }
 
-/* MOBILE FIRST */
+/* ----------------------------------------------- */
+/* MOBILE FIRST - AJUSTES CHAVE PARA VISUALIZAÇÃO E ROLAGEM */
 @media (max-width: 768px) {
+    /*
+        Mudança Chave:
+        1. Em vez de right: 0; e transform: translateX(100%);, que podem causar overflow,
+           usamos o par left: 100%; (para esconder) e transform: translateX(0);
+           quando o menu está fechado.
+
+        2. Quando a classe 'show' é ativada, usamos left: calc(100% - 12rem);
+           para mover o menu de volta para a posição visível.
+    */
     .nav-links {
-        position: absolute;
-        top: 4rem;
-        right: 0;
+        position: fixed; /* Use fixed para garantir que ocupe a viewport inteira */
+        top: 0; /* Começa no topo da tela */
+        right: 0; /* Fixa o lado direito */
+        /* Altura total da viewport para cobrir toda a tela */
+        height: 100vh; 
+        
         background: #013440;
         flex-direction: column;
         width: 12rem;
-        transform: translateX(100%);
+        
+        /* A CHAVE para esconder sem causar scroll horizontal: */
+        transform: translateX(12rem); /* Move o menu 12rem (sua própria largura) para a direita */
+        
         transition: transform 0.3s ease;
         padding: 1rem;
-        border-radius: 0.5rem 0 0 0.5rem;
+        border-radius: 0; /* Remove border-radius para cobrir canto superior */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra bacana */
+        z-index: 900; /* Garante que fique abaixo do menu-toggle, mas acima do conteúdo */
     }
 
     .nav-links.show {
-        transform: translateX(0);
+        /* A CHAVE para mostrar: remove a translação, trazendo o menu para right: 0 */
+        transform: translateX(0); 
+    }
+    
+    .nav-link {
+        padding: 0.75rem 0;
+        width: 100%;
+        text-align: center;
     }
 
     .menu-toggle {
         display: block;
+        z-index: 901; /* Garante que o botão hambúrguer esteja sempre clicável */
+    }
+    
+    /* Para telas ainda menores, o container da navbar pode precisar de ajustes */
+    .navbar .container {
+        padding: 0 0.5rem;
     }
 }
