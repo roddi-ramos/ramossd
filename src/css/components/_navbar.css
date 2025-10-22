@@ -62,21 +62,24 @@
 
 /* MOBILE FIRST */
 @media (max-width: 768px) {
+    .navbar{
+        overflow-x: clip;
+    }
+
     .nav-links {
         position: absolute;
         top: 4rem;
-        right: 0;
         background: #013440;
         flex-direction: column;
         width: 12rem;
-        transform: translateX(12rem);
+        right: -12rem;
         transition: transform 0.3s ease;
         padding: 1rem;
         border-radius: 0.5rem 0 0 0.5rem;
     }
 
     .nav-links.show {
-        transform: translateX(0);
+        right: 0;
     }
 
     .menu-toggle {
