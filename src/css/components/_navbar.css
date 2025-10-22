@@ -76,7 +76,7 @@
   }
 
   .nav-links.show {
-    max-height: 20rem; /* ajusta conforme a quantidade de links */
+    max-height: 30rem; /* ajusta conforme a quantidade de links */
     padding: 1rem 0;
   }
 
