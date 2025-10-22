@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // 3. LISTENERS DE SCROLL - UNIFICADOS
   window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY + 100; // Offset para a navbar fixa
+    // Offset para a navbar fixa (LÓGICA 1)
+    const scrollPos = window.scrollY + 100; 
 
     // --- LÓGICA 1: SCROLL SPY do Menu Principal (.nav-link) ---
     mainNavLinks.forEach(link => {
@@ -56,23 +57,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // --- LÓGICA 2: SCROLL SPY do Sumário Lateral (.sumario-lateral a) ---
+    // Ajuste da tolerância para 70px para ser mais sensível à posição do header fixo.
     let currentId = '';
-    const sidebarOffset = 150; // Ajuste para navbar fixa
+    const tolerance = 70; 
 
-    articleSections.forEach(section => {
-      // Verifica se a posição de rolagem passou do topo do H2
-      const sectionTop = section.offsetTop - sidebarOffset;
-      if (window.scrollY >= sectionTop) {
-        currentId = section.getAttribute('id');
-      }
-    });
+    // Itera ao contrário (do fim para o começo) para garantir que o último elemento visível seja pego primeiro.
+    for (let i = articleSections.length - 1; i >= 0; i--) {
+        const section = articleSections[i];
+        const rect = section.getBoundingClientRect(); 
+
+        // Se o topo da seção estiver ACIMA ou NA linha de tolerância (70px), este é o elemento atual.
+        if (rect.top <= tolerance) {
+            currentId = section.getAttribute('id');
+            break; // Sai do loop assim que encontrar o elemento mais alto que satisfez a condição
+        }
+    }
 
     sumarioLinks.forEach(link => {
       link.classList.remove('ativo'); // Remove a classe de todos
       
-      // Checa se o href do link lateral termina com o ID da seção atual
-      // Ex: link.href = "#section-id" e currentId = "section-id"
-      if (link.getAttribute('href') === `#${currentId}`) {
+      // Checa se o href do link lateral corresponde ao ID atual
+      if (link.getAttribute('href') === `#${currentId}` && currentId !== '') {
         link.classList.add('ativo'); // Adiciona a classe ao link da seção atual
       }
     });
