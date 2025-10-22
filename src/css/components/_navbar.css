@@ -69,7 +69,7 @@
         background: #013440;
         flex-direction: column;
         width: 12rem;
-        transform: translateX(100%);
+        transform: translateX(12rem);
         transition: transform 0.3s ease;
         padding: 1rem;
         border-radius: 0.5rem 0 0 0.5rem;
