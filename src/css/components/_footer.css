@@ -1,0 +1,88 @@
+footer {
+    background: #013440;
+    color: #F0F8FF;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1.5fr;
+    gap: 2rem;
+    text-align: left;
+    padding-top: 2rem;
+}
+
+footer h4 {
+    color: #00A8A8;
+    /* Cor principal para títulos */
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+footer .footer-info .footer-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+footer p,
+footer .footer-nav a,
+footer .footer-legal a {
+    display: block;
+    padding: 0.3rem 0;
+    font-size: 0.95rem;
+    color: #F0F8FF;
+    transition: color 0.3s ease;
+}
+
+footer .footer-nav a:hover,
+footer .footer-legal a:hover {
+    color: #00FF7F;
+}
+
+footer .footer-contact a {
+    color: #F0F8FF;
+}
+
+footer .footer-contact a:hover {
+    color: #00FF7F;
+}
+
+footer .social-links a img {
+    width: 2rem;
+    height: auto;
+    margin-right: 0.8rem;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+footer .social-links a:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsividade do Footer */
+@media (max-width: 992px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    footer h4 {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    footer .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    footer .social-links {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}

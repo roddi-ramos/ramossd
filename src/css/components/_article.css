@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@400;500;600&display=swap');
+
+p {
+    margin-bottom: 1rem;
+}
+
+h2,
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.meta-artigo {
+    font-size: 0.9em;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+}
+
+.meta-artigo .autor strong {
+    color: #00A8A8
+}
+
+.meta-artigo .separador {
+    margin: 0 0.5rem;
+}
+
+/* BARRA DE PESQUISA */
+form.d-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 30%;
+    margin-right: auto;
+}
+
+.pesquisa-navbar input[type="search"] {
+    font-family: 'rajdhani', sans-serif;
+    font-weight: 600;
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    margin-left: 0;
+    margin-right: 0 auto;
+    border-radius: 0.5rem;
+    padding: 5px 10px;
+    transition: width 0.3s ease;
+}
+
+.pesquisa-navbar button {
+    font-family: 'rajdhani', sans-serif;
+    font-weight: 600;
+    width: 8rem;
+    border: none;
+    border-radius: 0.5rem !important;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 30%;
+    margin-right: 30%;
+    cursor: pointer;
+    background-color: #00A8A8;
+    color: #F0F8FF;
+    box-shadow: 0 0.25rem 1rem rgba(0, 168, 168, 0.3);
+    
+}
+
+.pesquisa-navbar button:hover {
+  background-color: #00FF7F;
+  color: #013440;
+  box-shadow: 0 0.25rem 1rem rgba(106, 0, 244, 0.5);
+}
+
+@media (min-width: 768px) {
+    form.d-flex {
+        flex-direction: row;
+        gap: 0;
+        margin: 0;
+    }
+
+    .pesquisa-navbar input[type="search"] {
+        width: 15rem;
+        height: 2rem;
+    }
+
+    .pesquisa-navbar input[type="search"]:focus {
+        width: 20rem;
+    }
+
+    .pesquisa-navbar button {
+        margin: 0;
+        height: auto;
+    }
+}
+
+/* CONTAINER DO BREADCRUMB */
+.breadcrumb-container {
+    /* Centraliza na maioria dos layouts */
+    width: 90%; 
+    max-width: 1200px;
+    margin: 1rem auto 2rem; /* Espaçamento abaixo (1rem) e centralizado */
+    padding: 0.5rem 0;
+    
+    /* Configurações da fonte */
+    font-family: 'rajdhani', sans-serif;
+    font-size: 0.9rem; /* Tamanho discreto */
+    font-weight: 500;
+}
+
+/* ESTILO DOS LINKS NAVEGÁVEIS */
+.breadcrumb-link {
+    /* Cor que se destaca um pouco, mas sem ser o principal */
+    color: #013440; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.breadcrumb-link:hover {
+    color: #00A8A8; /* Sua cor de marca Ramos SD */
+    text-decoration: underline;
+}
+
+/* ESTILO DO SEPARADOR (>) */
+.breadcrumb-separator {
+    color: #ccc; /* Cor cinza sutil */
+    margin: 0 0.5rem; /* Espaço entre o link e o separador */
+}
+
+/* ESTILO DO ITEM ATUAL (O título do artigo) */
+.breadcrumb-current {
+    /* Cor para indicar que é a página atual (não é um link) */
+    color: #777; 
+    font-weight: 600; /* Mais negrito para clareza */
+}
+
+
+/* AJUSTE PARA MOBILE (Opcional, mas recomendado) */
+@media (max-width: 768px) {
+    .breadcrumb-container {
+        font-size: 0.8rem; /* Fonte um pouco menor no mobile */
+        padding: 0.5rem 1rem; /* Adiciona padding lateral para não colar nas bordas */
+        overflow-x: auto; /* Permite rolar se o caminho for muito longo */
+        white-space: nowrap; /* Impede a quebra de linha no mobile */
+    }
+}
+
+/* BADGES */
+
+.color-branding-autoridade {
+    background-color: #900C3F;
+    color: #F0F8FF;
+}
+
+.color-carreira-produtividade {
+    background-color: #6A00F4;
+    color: #F0F8FF;
+}
+
+.color-desenvolvimento {
+    background-color: #013440;
+    color: #F0F8FF;
+}
+
+.color-estrategia-futuro {
+    background-color: #FF5733;
+    color: #F0F8FF;
+}
+
+.color-importancia-site {
+    background-color: #5DADE2;
+    color: #F0F8FF;
+}
+
+.color-marketing-digital {
+    background-color: #33C1FF;
+    color: #F0F8FF;
+}
+
+.color-performance-ux {
+    background-color: #00FF7F;
+    color: #F0F8FF;
+}
+
+.color-seo-visibilidade {
+    background-color: #FFC300;
+    color: #F0F8FF;
+}
+
+.color-vendas-estrategias {
+    background-color: #00A8A8;
+    color: #F0F8FF;
+}
+
+@media (max-width: 768px) {
+    .meta-artigo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .meta-artigo .separador {
+        display: none;
+    }
+}
+
+.artigo-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+}
+
+.artigo-section .sumario-lateral {
+    width: 20%;
+    position: sticky;
+    top: 6rem;
+    background: linear-gradient(150deg, #ffff, #F0F8FF);
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+}
+
+.sumario-lateral {
+    color: #013440;
+}
+
+.sumario-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sumario-lateral ul li {
+    margin-bottom: 8px;
+}
+
+.sumario-lateral ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 4px 0;
+    transition: color 0.3s;
+}
+
+.sumario-lateral ul li a:hover {
+    color: #00A8A8;
+}
+
+.artigo-section .artigo-content {
+    width: 70%;
+}
+
+.artigo-content figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.artigo-content .imagem-capa img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.artigo-content .imagem-conteudo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Legendas das imagens */
+.artigo-content figcaption {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajuste de responsividade para imagens */
+@media (min-width: 768px) {
+    .artigo-content .imagem-conteudo img {
+    border-radius: 1rem;
+    }
+
+    .artigo-content figure {
+        margin: 1rem 0;
+    }
+
+    .artigo-content figcaption {
+        font-size: 0.8em;
+    }
+}
+
+/* Ajuste de responsividade (para telas menores) */
+@media (max-width: 992px) {
+    .artigo-section .container {
+        flex-direction: column;
+    }
+
+    .artigo-section .sumario-lateral {
+        position: static;
+        width: 100%;
+        margin-bottom: 30px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .artigo-section .artigo-content {
+        width: 100%;
+    }
+}

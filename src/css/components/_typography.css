@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #00A8A8;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: #013440;
+}
+
+h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #013440;
+}
+
+
+p,
+li,
+input,
+textarea,
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #013440;
+}
+
+a {
+    text-decoration: none;
+    color: #013440
+}

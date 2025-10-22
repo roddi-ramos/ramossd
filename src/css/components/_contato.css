@@ -1,0 +1,78 @@
+/* FORMULARIO */
+.form-response {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #013440;
+}
+
+.mb-3 {
+    width: 70%;
+    margin: auto;
+    font-weight: bold;
+    color: #013440;
+}
+
+.btn-form {
+    text-align: center;
+}
+
+.form-response {
+    text-align: center;
+}
+
+/* INFORMAÇÕES DE CONTATO */
+.info-item {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #6A00F4;
+    color: #013440;
+}
+
+.info-item strong {
+    display: block;
+    font-weight: 700;
+}
+
+.info-item a {
+    color: #013440;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    transition: color 0.3s;
+}
+
+.info-item a:hover {
+    color: #00A8A8;
+}
+
+/* Reforço de Credibilidade (Checklist) */
+.credibilidade-box {
+    margin-top: 2rem;
+    color: #013440;
+}
+
+.credibilidade-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.credibilidade-box li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.credibilidade-box li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.imagem-reforco {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
