@@ -266,6 +266,10 @@ section:nth-of-type(even) {
 
 /* RESPONSIVIDADE GERAL */
 @media (min-width: 768px) {
+  body{
+    overflow-x: clip !important;
+  }
+
   header#hero img {
     max-width: 25%;
   }
