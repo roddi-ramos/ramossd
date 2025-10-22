@@ -1,9 +1,17 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-const links = document.querySelectorAll('.nav-link');
 
 menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+  const isOpen = navLinks.classList.toggle('show');
+
+  // bloqueia rolagem horizontal/vertical enquanto o menu estiver aberto
+  if (isOpen) {
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+  }
 });
 
 // Scroll spy
