@@ -1,17 +1,9 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-link');
 
 menuToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('show');
-
-  // bloqueia rolagem horizontal/vertical enquanto o menu estiver aberto
-  if (isOpen) {
-    document.documentElement.style.overflow = 'clip';
-    document.body.style.overflow = 'clip';
-  } else {
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
-  }
+  navLinks.classList.toggle('show');
 });
 
 // Scroll spy
