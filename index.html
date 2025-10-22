@@ -34,35 +34,6 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="/src/css/style.css">
 
-  <!-- CORREÇÕES CRÍTICAS MOBILE/FIXED (INJETADO PARA DEBUG) -->
-  <style>
-    /* FIX 1: Elimina qualquer rolagem lateral (overflow-x) indesejada */
-    html, body {
-      overflow-x: hidden;
-      /* Aplica a largura total para correção de Box-Sizing */
-      width: 100%;
-    }
-
-    /* FIX 2: Garante que o botão flutuante seja FIXO imediatamente e esteja na camada mais alta */
-    .whatsapp-float {
-      position: fixed !important; 
-      z-index: 99999 !important; 
-    }
-    
-    /* FIX 3: Esconde o menu de navegação no mobile por CSS, se o JS falhar */
-    @media (max-width: 768px) {
-      .nav-links {
-        /* Garante que o menu esteja escondido por padrão no mobile */
-        display: none; 
-      }
-      /* Se seu JS adiciona a classe 'active', você precisa ter a regra:
-      .nav-links.active {
-          display: flex; 
-          flex-direction: column;
-      }
-      no seu arquivo style.css */
-    }
-  </style>
 </head>
 
 <body>
