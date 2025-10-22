@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
   color: #013440;
   background-color: #F0F8FF;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 /* CONTAINER */
@@ -266,11 +266,6 @@ section:nth-of-type(even) {
 
 /* RESPONSIVIDADE GERAL */
 @media (min-width: 768px) {
-  body {
-    /* SOLUÇÃO CHAVE: Impede que elementos fora do viewport causem barra de rolagem horizontal */
-    overflow-x: hidden;
-  }
-
   header#hero img {
     max-width: 25%;
   }
