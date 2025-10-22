@@ -17,10 +17,7 @@ body {
   line-height: 1.6;
   color: #013440;
   background-color: #F0F8FF;
-}
-
-header{
-  overflow-x: clip !important;
+  overflow-x: hidden;
 }
 
 /* CONTAINER */
