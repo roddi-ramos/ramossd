@@ -66,8 +66,8 @@ body {
 }
 
 .btn {
-  width: 50%;
-  padding: 0.5rem;
+  
+  padding: 0.5rem 2rem;
   margin-bottom: 2rem;
 }
 
@@ -101,6 +101,18 @@ section:nth-of-type(even) {
   grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 2rem;
+}
+
+.container-kamuri {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.container-kamuri img {
+  max-width: 10rem;
 }
 
 /* CARDS FUTURISTAS */
@@ -283,6 +295,12 @@ section:nth-of-type(even) {
   .cards-blog {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .container-kamuri {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
 }
 
 @media (min-width: 1024px) {
