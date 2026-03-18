@@ -27,6 +27,7 @@
     <meta property="og:image" content="https://www.ramossd.com/src/images/logotipo-principal.webp" />
     <meta property="og:type" content="website" />
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/src/css/style.css?v=2.5.0">
@@ -42,7 +43,7 @@
             <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
             <ul class="nav-links">
                 <li><a href="/index.html" class="nav-link">Home</a></li>
-                <li><a href="/index.html#about" class="nav-link">Sobre</a></li>
+                <li><a href="/pages/about-us.html" class="nav-link">Sobre</a></li>
                 <li><a href="/index.html#portfolio" class="nav-link">Portfólio</a></li>
                 <li><a href="/pages/contato.html" class="nav-link">Contato</a></li>
                 <li><a href="/pages/blog.html" class="nav-link">Blog</a></li>
@@ -53,7 +54,7 @@
     <div class="breadcrumb-container">
         <a href="/index.html" class="breadcrumb-link">Home</a>
         <span class="breadcrumb-separator">&gt;</span>
-        <a href="/pages/kamuri-flow-7.html" class="breadcrumb-link">Kamuri Flow 7</a>
+        <span class="breadcrumb-current">Kamuri Flow 7</span>
     </div>
 
     <header class="servicos-content fade-in" style="padding: 6rem 0;">
@@ -66,8 +67,10 @@
                 “existir na internet”.
             </p>
             <div class="mt-5">
-                <p class="mb-2"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Nada de soluções genéricas.</p>
-                <p class="mb-2"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Nada de sites bonitos que não convertem.</p>
+                <p class="mb-2"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Nada de soluções genéricas.
+                </p>
+                <p class="mb-2"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Nada de sites bonitos que
+                    não convertem.</p>
                 <p class="mb-4"><strong>Aqui, cada decisão tem um porquê.</strong></p>
                 <a href="https://wa.me/5541988501026?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista.%20Gostaria%20de%20entender%20mais%20sobre%20o%20Kamuri%20Flow%207."
                     target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"
@@ -97,8 +100,8 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                <p style="font-size: 1.2rem; color: #f0f8ff; border-radius: 1rem; padding: 0.5rem;"><strong>📉 O
-                        resultado?</strong><br>
+                <p style="font-size: 1.2rem; color: #f0f8ff; border-radius: 1rem; padding: 0.5rem;"><strong><i
+                            class="bi bi-graph-down-arrow"></i> O resultado?</strong><br>
                     Tráfego sem conversão | Esforço sem previsibilidade | Crescimento travado.</p>
             </div>
         </div>
@@ -112,40 +115,76 @@
             <div class="row mt-5 text-start">
                 <div class="col-md-6 offset-md-3">
                     <ul style="list-style: none; padding: 0;">
-                        <li class="mb-3">✅ <strong>Clareza de posicionamento:</strong> Sua marca falando a língua do
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Clareza de
+                                posicionamento:</strong> Sua marca falando a língua do
                             cliente.</li>
-                        <li class="mb-3">✅ <strong>Experiência do usuário:</strong> Navegação fluida e intuitiva.</li>
-                        <li class="mb-3">✅ <strong>Lógica de negócio:</strong> Cada botão tem uma intenção comercial.
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Experiência do
+                                usuário:</strong> Navegação fluida e intuitiva.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Lógica de negócio:</strong>
+                            Cada botão tem uma intenção comercial.
                         </li>
-                        <li class="mb-3">✅ <strong>Conversão real:</strong> Foco total no seu ROI.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Conversão real:</strong>
+                            Foco total no seu ROI.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="metodo" class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">O Método Kamuri Flow 7</h2>
-            <p class="mb-5">Um sistema em 7 pilares para transformar presença em resultado</p>
-            <div class="cards-blog">
-                <div class="card p-3">1. Diagnóstico do negócio</div>
-                <div class="card p-3">2. Definição do objetivo</div>
-                <div class="card p-3">3. Estruturação da rota</div>
-                <div class="card p-3">4. Arquitetura estratégica</div>
-                <div class="card p-3">5. Design personalizado</div>
-                <div class="card p-3">6. Ativos de apoio (PDF/Criativos)</div>
-                <div class="card p-3">7. Entrega e Orientação</div>
-            </div>
-        </div>
-    </section>
+
 
     <section id="planos" class="py-5">
         <div class="container text-center">
-            <h2 class="mb-5">Escolha o nível de estrutura ideal para o seu momento</h2>
+            <h2 class="mb-1">Escolha o nível de estrutura ideal para o seu momento</h2>
+            <p class="text-center mb-5 mt-0" style="opacity: 0.6;">
+                <small>Clique no plano que melhor se adapta às suas necessidades</small>
+            </p>
+
             <div class="row g-4" style="display: flex; justify-content: center;">
+
+                <!-- Card Local -->
                 <div class="col-md-4 text-start">
-                    <div class="card h-100 p-4 shadow-sm" style="border-top: 0.5rem solid #00A8A8;"><a
+                    <div class="card h-100 p-4 shadow-sm" style="border-top: 0.5rem solid #00A8A8;">
+                        <a href="https://wa.me/5541988501026?text=Ol%C3%A1!%20Quero%20entender%20melhor%20como%20funciona%20o%20Metodo%20Kamuri%20Flow%207%20Local."
+                            target="_blank" rel="noopener noreferrer">
+
+                            <div>
+                                <h3>Kamuri Flow 7 | Local</h3>
+
+                                <p>Seja encontrado por quem já está procurando o que você vende.</p>
+
+                                <p>
+                                    Para negócios que precisam <strong>aparecer no Google e capturar demanda
+                                        local</strong>,
+                                    sem depender apenas de redes sociais.
+                                </p>
+
+                                <ul class="ps-5">
+                                    <li>Diagnóstico completo de visibilidade local</li>
+                                    <li>Estruturação estratégica do Google Business Profile</li>
+                                    <li>Posicionamento por palavras-chave da sua cidade</li>
+                                    <li>Padronização e organização do perfil</li>
+                                    <li>Estratégia de avaliações e reputação</li>
+                                    <li>Plano de crescimento e continuidade</li>
+                                </ul>
+
+                                <hr>
+
+                                <p>
+                                    <small><i class="bi bi-check-circle text-success me-2" style="color: #00A8A8;"></i>
+                                        Ideal para empresas que não aparecem no Google ou não geram demanda local
+                                        consistente.</small>
+                                </p>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Start -->
+                <div class="col-md-4 text-start">
+                    <div class="card h-100 p-4 shadow-sm" style="border-top: 0.5rem solid #6366F1;"><a
                             href="https://wa.me/5541988501026?text=Ol%C3%A1!%20Quero%20entender%20melhor%20como%20funciona%20o%20Metodo%20Kamuri%20Flow%207%20Start."
                             target="_blank" rel="noopener noreferrer">
                             <div>
@@ -163,11 +202,56 @@
                                     <li>Domínio incluso (1 ano)</li>
                                 </ul>
                                 <hr>
-                                <p><small>✔️ Ideal para quem precisa de clareza e primeiros movimentos organizados.</small></p>
+                                <p><small><i class="bi bi-check-circle text-success me-2"
+                                            style="color: #00A8A8;"></i>Ideal para quem precisa de clareza e primeiros
+                                        movimentos
+                                        organizados.</small></p>
                             </div>
                         </a></div>
                 </div>
 
+                <div class="col-md-4 text-start">
+                    <div class="card h-100 p-4 shadow-sm" style="border-top: 0.5rem solid #00A8A8;">
+                        <a href="https://wa.me/5541988501026?text=Ol%C3%A1!%20Quero%20entender%20melhor%20como%20funciona%20o%20Metodo%20Kamuri%20Flow%207%20Commerce."
+                            target="_blank" rel="noopener noreferrer">
+
+                            <div>
+                                <h3>Kamuri Flow 7 | Commerce</h3>
+
+                                <p>Transforme sua loja em uma estrutura que realmente vende.</p>
+
+                                <p>
+                                    Para negócios que já vendem, mas precisam <strong>aumentar conversão e
+                                        reduzir perda de vendas</strong>
+                                    com uma estrutura estratégica.
+                                </p>
+
+                                <ul class="ps-5">
+                                    <li>Diagnóstico completo da operação de vendas</li>
+                                    <li>Reestruturação estratégica da home</li>
+                                    <li>Otimização das páginas de produto</li>
+                                    <li>Melhoria da jornada de compra</li>
+                                    <li>Redução de fricções e abandono</li>
+                                    <li>Base estruturada para crescimento e escala</li>
+                                </ul>
+
+                                <hr>
+
+                                <p>
+                                    <small>
+                                        <i class="bi bi-check-circle me-2" style="color: #00A8A8;"></i>
+                                        Ideal para operações que tem ou desejam ter e-commerce e precisam de mais eficiência, clareza e
+                                        consistência nos resultados.
+                                    </small>
+                                </p>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Core --><!--
                 <div class="col-md-4 text-start">
                     <div class="card h-100 p-4 shadow-sm" style="border-top: 0.5rem solid #00A8A8;"><a
                             href="https://wa.me/5541988501026?text=Ol%C3%A1!%20Quero%20entender%20melhor%20como%20funciona%20o%20Metodo%20Kamuri%20Flow%207%20Core."
@@ -175,7 +259,8 @@
                             <div>
                                 <h3> Kamuri Flow 7 | Core</h3>
                                 <p>Estruture sua jornada e profissionalize sua conversão.</p>
-                                <p>Para negócios que já <strong>vendem</strong>, mas ainda <strong>não estruturam</strong> a presença digital.</p>
+                                <p>Para negócios que já <strong>vendem</strong>, mas ainda <strong>não
+                                        estruturam</strong> a presença digital.</p>
                                 <ul class="ps-3">
                                     <li> Estruturação completa da jornada comercial</li>
                                     <li>Site institucional estratégico (até 5 páginas)</li>
@@ -187,7 +272,10 @@
                                     <li>Domínio + hospedagem inclusos (1 ano)</li>
                                 </ul>
                                 <hr>
-                                <p><small>✔️ Ideal para quem quer previsibilidade e organização real de vendas.</small></p>
+                                <p><small><i class="bi bi-check-circle text-success me-2"
+                                            style="color: #00A8A8;"></i>Ideal para quem quer previsibilidade e
+                                        organização real de vendas.</small>
+                                </p>
                             </div>
                         </a></div>
                 </div>
@@ -217,11 +305,27 @@
                         </a></div>
                 </div>
                 -->
+                <!-- Fim dos cards -->
+
+                <h3 class="text-center mt-5">
+                    Para operações mais complexas que exigem profundidade estratégica
+                </h3>
+
+                <p class="text-center mt-4">
+                    Para empresas que já operam em um nível mais avançado, alguns projetos exigem uma atuação mais
+                    profunda. <br>
+                    Nesses casos, a construção deixa de ser apenas estrutural e passa a ser estratégica, com foco em
+                    decisões que sustentam posicionamento, crescimento e escala a longo prazo.
+                </p>
+
 
             </div>
             <a href="https://wa.me/5541988501026?text=Ol%C3%A1!%20Quero%20entender%20melhor%20como%20funciona%20o%20Metodo%20Kamuri%20Flow%207%20para%20o%20meu%20negocio."
-                target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-5 px-5">Solicitar orçamento
+                target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-5 px-5 mb-0">Solicitar orçamento
                 personalizado</a>
+            <p class="text-center mt-0" style="opacity: 0.6;">
+                <small>Projetos sob medida são avaliados individualmente</small>
+            </p>
         </div>
     </section>
 
@@ -373,9 +477,12 @@
         <div class="container">
             <h2 class="mb-5">Aqui você não compra um site. Você constrói um sistema.</h2>
             <div class="row mt-4">
-                <div class="col-md-4"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Atendimento direto</div>
-                <div class="col-md-4"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Pensamento de negócio</div>
-                <div class="col-md-4"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Sem templates genéricos</div>
+                <div class="col-md-4"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Atendimento direto
+                </div>
+                <div class="col-md-4"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Pensamento de negócio
+                </div>
+                <div class="col-md-4"><img src="/src/images/icon-check.svg" alt="Ícone de check"> Sem templates
+                    genéricos</div>
             </div>
         </div>
         <hr class="mt-5">
@@ -386,7 +493,7 @@
             <h2>Se sua presença digital não está ajudando a vender, ela está te atrasando.</h2>
             <h3 class="mt-3" style="color: #00A8A8;">Vamos estruturar isso do jeito certo?</h3>
             <a href="https://wa.me/5541988501026" class="btn btn-success btn-lg mt-4 px-5"
-                style="border-radius: 50px;">Falar comigo no WhatsApp</a>
+                style="border-radius: 50px;">Fale conosco no WhatsApp</a>
         </div>
     </section>
 
@@ -400,7 +507,7 @@
                 <h4>Navegação</h4>
                 <nav class="footer-nav">
                     <a href="/index.html">Home</a>
-                    <a href="/index.html#about">Sobre</a>
+                    <a href="/pages/about-us.html">Sobre Nós</a>
                     <a href="/index.html#portfolio">Portfólio</a>
                     <a href="/pages/contato.html">Contato</a>
                 </nav>
@@ -422,7 +529,7 @@
             <div class="footer-legal">
                 <h4>Institucional</h4>
                 <a href="/pages/blog.html">Blog</a>
-        <a href="/pages/legal/index-lgpd.html">Termos e Politicas Legais</a>
+                <a href="/pages/legal/index-lgpd.html">Termos e Politicas Legais</a>
             </div>
         </div>
         <p style="color: #fff; text-align: center; margin-top: 1rem; margin-bottom: 2rem;">&copy; 2025 Ramos SD |
