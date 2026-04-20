@@ -74,16 +74,14 @@
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-    # Se o arquivo sem extensão não existir,
-    # mas existir com .html, serve ele
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-    RewriteRule ^(.+)$ $1.html [L]
+    # URL limpa para arquivos dentro de /pages
+    RewriteCond %{REQUEST_URI} ^/pages/([^.]+)$ [NC]
+    RewriteCond %{DOCUMENT_ROOT}/pages/%1.html -f
+    RewriteRule ^pages/([^.]+)$ /pages/$1.html [L]
 
-    # Redireciona URL antiga .html para limpa
-    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-    RewriteRule ^ %1 [R=301,L]
+    # Redireciona .html para URL limpa
+    RewriteCond %{THE_REQUEST} \s/+pages/([^.]+)\.html[\s?] [NC]
+    RewriteRule ^pages/([^.]+)\.html$ /pages/$1 [R=301,L]
 </IfModule>
 
 # --- BLOQUEIO DE ARQUIVOS SENSÍVEIS ---
